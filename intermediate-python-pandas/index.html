@@ -1,37 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
+		<meta name="author" content="Girl Develop It">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <title>Introduction to Pandas | Girl Develop It</title>
+		<title>Intro to Pandas Workshop</title>
+		
+		<link rel="icon" type="image/x-icon" href="assets/imgs/favicon.ico" />
 
-    <meta name="description" content="This is the official Girl Develop It Intro to Pandas workshop. The workshop is meant to be taught in one two-hour session. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+	<!-- RevealJS CDN -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<!-- GDI Custom Theme -->
+		<link rel="stylesheet" href="assets/css/gdi-theme.css">
 
-  <link rel="shortcut icon" href="favicon.ico">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
+	</head>
 
-  <link rel="stylesheet" href="css/reveal.min.css">
-  <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
-  <link rel="stylesheet" href="lib/css/light.css">
-  <link rel="stylesheet" href="css/print/pdf.css" media="print">
-
-  <script src="lib/js/head.min.js"></script>
-
-  <!--[if lt IE 9]>
-  <script src="lib/js/html5shiv.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-  <div class="reveal">
+	<body>
+	
+		<div class="reveal">
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
 
         <!-- Opening slide -->
         <section>
-          <img src="img/circle-gdi-logo.png" class="img--bare" height="450px" />
+          <img src="assets/imgs/circle-gdi-logo.png" class="img--bare" height="450px" />
           <div class="copy--small box--small">
             <h3><span class="green">Intro to Pandas Workshop</span></h3>
           </div>
@@ -301,6 +302,10 @@ In [19]: len(ids_list)
         <div class='copy--small box--small fragment'><pre><code contenteditable class="python">
 In [20]: large_purchases = purchases[purchases['total'] > 100.0] 
         </code></pre></div>
+      </section>
+      
+      <section>
+      <h3>Dataframe Manipulation: Filtering (Cont'd)</h3>
         <p class='copy--small box--small fragment'>You want to look from inside out: </p>
         <div class='copy--small box--small fragment'><pre><code contenteditable class="python">
 # We are calling the total price column from purchases
@@ -397,31 +402,39 @@ In [24]: totals_member_date = purchases.groupby(['date', 'member_id'],
     </footer>
   </div>
 
-      <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+<!-- REVEAL.JS Script Files - Do Not Edit -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/plugin.min.js" integrity="sha512-zB6lDbC8bQBXzW9MkgdFtS5wRr+AhAJ1XXJz8Xolr+VVmB7fbHIUd6/iboY+RozDWXfbqw1b4hYzoBhhTXwZFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+<script>
+  const srcUrlPrefix = "https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/";
+  Reveal.initialize({
+    hash: true,
+    center: true,
+    slideNumber: true,
+    slideNumber: 'c/t',
+    showNotes: false,
+    margin: 0.1,
+    preloadIframes: true,
+    plugins: [ RevealHighlight ],
+    pdfSeparateFragments: true
+  });
 
-    <script>
+  // add HighlightJS-badge (options are optional)
+  var options = {
+      copyIconContent: "📄",
+      checkIconContent: "✅"
+  };
+  window.highlightJsBadge(options);
 
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true },
-          ]
-      });
-
-    </script>
-  </body>
+  if (window.location.search == "?print-pdf") {
+      var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
+      uncounted.forEach(node => {
+          node.parentNode.classList.add("no-print")
+      })
+  }
+</script>
+</body>
 </html>
