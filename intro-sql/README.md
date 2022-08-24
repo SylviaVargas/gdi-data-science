@@ -43,3 +43,8 @@ Second Half (Afternoon): How to Write to a Database
 
   + Creating, deleting, and updating a table
   + Super-awesome bonus round: subqueries
+  
+  ### Resources:
+ - Online tool for in class exercises: https://www.db-fiddle.com/
+ - Online resource for practice questions: https://sqlbolt.com/
+  
