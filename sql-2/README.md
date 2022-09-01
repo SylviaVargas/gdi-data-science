@@ -1,6 +1,6 @@
 # SQL II course notes
 
-# Created by: Faiza Khan
+## Created by: Faiza Khan
 
 ## Course description:
 
