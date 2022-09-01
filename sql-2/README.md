@@ -16,7 +16,7 @@ Tool used to teach the course: [DB fiddle](https://www.db-fiddle.com/)
 - Joins on multiple keys
 - CASE statement
 
-- Joins review (slide 58 in this presentation)
+- Joins review (slide 60 in this presentation) *link to current intro to sql slideshow needs to be added here*
 - Write queries using the set of tables provided in [student data](https://www.db-fiddle.com/f/6eXpPSRFQgzdKUCjSsbSF4/9)
 
 # Sessions 2 & 3:
